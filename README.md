@@ -45,14 +45,6 @@ https://github.com/FireFather/stockfish-8-nnue-psq
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_12.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_13.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_14.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_15.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_16.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_17.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_18.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_19.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_20.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_21.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_22.bmp)
 
 
 [![Build Status](https://travis-ci.org/official-stockfish/Stockfish.svg?branch=master)](https://travis-ci.org/official-stockfish/Stockfish)
