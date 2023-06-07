@@ -32,13 +32,13 @@ The nnue file size must = 20,530 KB (halfkp_256x2-32-32).
 https://github.com/FireFather/stockfish-8-nnue-psq
 
 
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_7.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_1.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_2.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_3.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_4.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_5.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_6.bmp)
-![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_7.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_8.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_9.bmp)
 ![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/stockfish_10.bmp)
