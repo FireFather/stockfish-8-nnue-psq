@@ -8,12 +8,14 @@ The implementation relies on mapping the pieces/square of the current position t
 piece/square values that nnue-probe utilizes:
 	
 
-* 	nnue-probe internal piece representation
-*	wking=1, wqueen=2, wrook=3, wbishop= 4, wknight= 5, wpawn= 6,
-*	bking=7, bqueen=8, brook=9, bbishop=10, bknight=11, bpawn=12
-*	stockfish internal piece representation
-*	W_PAWN=1, W_KNIGHT=2, W_BISHOP=3, W_ROOK=4, W_QUEEN=5, W_KING=6,
-*	B_PAWN=9, B_KNIGHT=10, B_BISHOP=11, B_ROOK=12, B_QUEEN=13, B_KING=14
+- nnue-probe internal piece representation:
+- wking=1, wqueen=2, wrook=3, wbishop= 4, wknight= 5, wpawn= 6,
+- bking=7, bqueen=8, brook=9, bbishop=10, bknight=11, bpawn=12
+
+
+- stockfish internal piece representation:
+- W_PAWN=1, W_KNIGHT=2, W_BISHOP=3, W_ROOK=4, W_QUEEN=5, W_KING=6,
+- B_PAWN=9, B_KNIGHT=10, B_BISHOP=11, B_ROOK=12, B_QUEEN=13, B_KING=14
 
 Build piece/square arrays as required by nnue specs above...
 see evaluate.cpp for details.
