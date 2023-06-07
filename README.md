@@ -1,27 +1,31 @@
 ### Overview
 # stockfish-8-nnue-psq
 
-This is an example of a quick and dirty nnue implementation using the
-'nnue_evaluate_fen(const char* fen)'
-and
-'decode_fen(fen, &player, &castle, &fifty, &move_number, pieces, squares)'
-functions as given in Daniel Shawul's/Cfish excellent nnue probe code https://github.com/dshawul/nnue-probe/
+This is a nnue implementation using Daniel Shawul's/Cfish excellent nnue probe code https://github.com/dshawul/nnue-probe/
 
-This is an extremely easy way to implement NNUE (halfkp_256x2-32-32).
+This is an very efficient, fast, and effective way to implement NNUE (halfkp_256x2-32-32) in any engine.
+The implementation relies on mapping the pieces/square of the current position that SF wants to evaluate, to the default internal 
+piece/square values that nnue-probe utilizes:
+	
+/**
+* nnue-probe internal piece representation
+*     wking=1, wqueen=2, wrook=3, wbishop= 4, wknight= 5, wpawn= 6,
+*     bking=7, bqueen=8, brook=9, bbishop=10, bknight=11, bpawn=12
+*
+* Make sure the pieces you pass to the library from your engine
+* use this format.
+*/
 
-1. copy the nnue-probe code to your engine's folder
-2. add nnue_init("nn.bin"); to your main() function (or before the input loop in UCI_Loop() function.
-3. add #include "nnue/nnue.h" to evaluate.cpp
-4. add code to the very begginning pf your evaluate function that
-	extracts the fen from current position and
-	calls nnue_evaluate_fen(c)
-			for ex:
-			const std::string fenstr = pos.fen();
-			const char* c = fenstr.c_str();
-			int nnue_score = nnue_evaluate_fen(c);
-			return Value(nnue_score);
+Stockfish 8:
+	enum Piece {
+	W_PAWN=1, W_KNIGHT=2, W_BISHOP=3, W_ROOK=4, W_QUEEN=5, W_KING=6,
+	B_PAWN=9, B_KNIGHT=10, B_BISHOP=11, B_ROOK=12, B_QUEEN=13, B_KING=14,
+	};
 
-Any halfkp_256x2-32-32 NNUE can be used...see:
+Build piece/square arrays as required by nnue specs above...
+see evaluate.cpp for details.
+
+Any halfkp_256x2-32-32 NNUE can be used with the nnue binary...see:
 
 https://github.com/FireFather/halfkp_256x2-32-32-nets or
 
@@ -31,10 +35,31 @@ SF-compatible nets start on page 72-73 (approx.) with dates of 21-05-02 22:26:43
 
 The nnue file size must = 20,530 KB (halfkp_256x2-32-32).
 
-This impementation is easy, but slow...the full nuue-probe implementation utilizes piece->square mappings and is much faster & stronger.
-It can be seen demonstrated on SF8 here:
+https://github.com/FireFather/stockfish-8-nnue-psq
 
-https://github.com/FireFather/stockfish-8-nnue
+
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_1.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_2.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_3.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_4.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_5.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_6.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_7.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_8.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_9.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_10.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_11.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_12.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_13.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_14.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_15.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_16.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_17.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_18.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_19.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_20.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_21.bmp)
+![alt tag](https://raw.githubusercontent.com/FireFather/stockfish-8-nnue-psq/master/logos/fire_22.bmp)
 
 
 [![Build Status](https://travis-ci.org/official-stockfish/Stockfish.svg?branch=master)](https://travis-ci.org/official-stockfish/Stockfish)
